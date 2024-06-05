@@ -16,6 +16,9 @@ import CRPC from './components/art/sectioPages/CRPC';
 import Marriage from './components/art/sectioPages/Marriage';
 import MotorV from './components/art/sectioPages/MotorV';
 import FindLawyers from './components/art/lawyers/FindLawyers';
+import Form from './components/art/Templates/Form';
+import GiftDeed from './components/art/Templates/GiftDeed';
+import GiftDeedForm from './components/art/Templates/GiftDeedForm';
 function App() {
 
   const { authUser } = useAuthContext()
@@ -71,6 +74,10 @@ function App() {
     {
       path: '/add',
       element: <AddPdf />
+    },
+    {
+      path:'/form',
+      element:<GiftDeed/>
     }
   ])
 
