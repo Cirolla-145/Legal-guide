@@ -42,7 +42,7 @@ const GetPdfs = () => {
         // </div>
 
         
-            <div className="grid grid-cols-4 gap-2">
+            <div className=" grid grid-cols-4 gap-2">
                 {allImage == null ? "" : allImage.map((data) => {
                     return (
                         <div className="card bg-base-100 m-5 z-0">

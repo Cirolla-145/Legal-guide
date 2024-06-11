@@ -19,6 +19,7 @@ import FindLawyers from './components/art/lawyers/FindLawyers';
 import Form from './components/art/Templates/Form';
 import GiftDeed from './components/art/Templates/GiftDeed';
 import GiftDeedForm from './components/art/Templates/GiftDeedForm';
+import Hello from './components/art/Templates/Hello';
 function App() {
 
   const { authUser } = useAuthContext()
@@ -77,13 +78,13 @@ function App() {
     },
     {
       path:'/form',
-      element:<GiftDeed/>
+      element:<Hello/>
     }
   ])
 
   return (
 
-    <div className=" h-screen">
+    <div className=" h-screen ">
       <RouterProvider router={router} />
       <Toaster />
     </div>
