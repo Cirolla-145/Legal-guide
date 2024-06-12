@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { props } from './GiftDeed'
+
 
 // import './GDF.css'
 
-const GiftDeedForm = (props) => {
-
+const GiftDeedForm = () => {
     
-    console.log(props.day,props )
-    
+     const today = new Date()  
 
   return (
     <div className="flex text-black justify-center m-0 items-center ">
@@ -15,15 +15,15 @@ const GiftDeedForm = (props) => {
             <div className="body">
                 <div className=" p-1 mb-2 justify-start">
                     <p>
-                        This deed of gift made this day Day of month (month) year (year) between;
+                        This deed of gift made this day {props.day===""?<span>_________</span> : <span>{props.day}</span>} of month {props.month===""?<span>_________</span> : <span>{props.month}</span>} year {props.year===""?<span>_________</span> : <span>{props.year}</span>} between;
                     </p>
                 </div>
                 <div className="p-1 mb-2">
                     <p>
-                        Mr. donor, Age donorAge years,
+                        Mr. {props.donor===""?<span>_________</span> : <span>{props.donor}</span>}, Age {props.donorAge===""?<span>_________</span> : <span>{props.donorAge}</span>} years,
                     </p>
                     <p>
-                        Resident of donorAdd
+                        Resident of {props.donorAdd===""?<span>_________</span> : <span>{props.donorAdd}</span>}
                     </p>
                     <p>
                         (Hereinafter called the “Donor”) of the One part
@@ -36,10 +36,10 @@ const GiftDeedForm = (props) => {
                 </div>
                 <div className="p-1 mb-2">
                     <p>
-                        Mr. donee, Age doneeAge years,
+                        Mr. {props.donee===""?<span>_________</span> : <span>{props.donee}</span>}, Age {props.doneeAge===""?<span>_________</span> : <span>{props.doneeAge}</span>} years,
                     </p>
                     <p>
-                        Resident of doneeAdd
+                        Resident of {props.doneeAdd===""?<span>_________</span> : <span>{props.doneeAdd}</span>}
                     </p>
                     <p>
                         (Hereinafter called the “Donee”) of the Other part
@@ -55,13 +55,13 @@ const GiftDeedForm = (props) => {
                         <p>1.
                             In consideration of natural love and affection being the son/daughter of Donor, the donor
                             hereby
-                            assigns to the donee a sum of Rs. amount to be held by the donee absolutely.
+                            assigns to the donee a sum of Rs. {props.amount===""?<span>_________</span> : <span>{props.amount}</span>} to be held by the donee absolutely.
                         </p>
                     </div>
                     <div className="point">
                         <p>2.
                             The possession of the Rs. amount vide cheque No. chequeNo Drawn on
-                            `today.getDate(). today.getMonth() + 1. today.getFullYear().` , _____________ Branch dated _/_/__ hereinabove donated unto the donee
+                            {today.getDate()}.{today.getMonth() + 1}. {today.getFullYear()} , herein above donated unto the donee
                             and
                             has
                             been physically handed over to the donee as absolute owner before execution of this Gift
@@ -70,8 +70,8 @@ const GiftDeedForm = (props) => {
                     </div>
                     <div className="point">
                         <p>3.
-                            The said gift of Rs.______________(amount) has been accepted by Mr/Miss
-                            ___________________________.
+                            The said gift of Rs.{props.amount===""?<span>_________</span> : <span>{props.amount}</span>} has been accepted by Mr/Miss
+                            {props.donee===""?<span>_________</span> : <span>{props.donee}</span>}.
                         </p>
                     </div>
                     <div className="point">

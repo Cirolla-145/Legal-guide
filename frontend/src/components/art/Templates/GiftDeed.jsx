@@ -3,6 +3,7 @@ import { saveAs } from 'file-saver'
 import React, { useState } from 'react'
 import GiftDeedForm from './GiftDeedForm'
 
+export let props = {}
 
 const GiftDeed = () => {
 
@@ -22,11 +23,15 @@ const GiftDeed = () => {
 
 
   })
+
+  props = inputs
+
   let [count, setCount] = useState(0)
 
-  let onFormSubmit = (e) => {
+   let onFormSubmit = (e) => {
     e.preventDefault()
     setCount(count + 1)
+    
   }
 
   let Complete = (inputs)=>{
@@ -174,7 +179,7 @@ const GiftDeed = () => {
 
       </form>
       </div>
-      <GiftDeedForm props={inputs}/>
+      <GiftDeedForm/>
     </div>
   )
 }

@@ -98,7 +98,7 @@ const pdfTemplate = ({ day, month, year, donor, donorAge, donorAdd, donee, donee
                     <div class="point">
                         <p>
                             The possession of the Rs. ${amount} vide cheque No. ${chequeNo} Drawn on
-                            ${`${today.getDate()}. ${today.getMonth() + 1}. ${today.getFullYear()}.`} , _____________ Branch dated _/_/__ hereinabove donated unto the donee
+                            ${`${today.getDate()}. ${today.getMonth() + 1}. ${today.getFullYear()}.`}  herein above donated unto the donee
                             and
                             has
                             been physically handed over to the donee as absolute owner before execution of this Gift
@@ -107,8 +107,8 @@ const pdfTemplate = ({ day, month, year, donor, donorAge, donorAdd, donee, donee
                     </div>
                     <div class="point">
                         <p>
-                            The said gift of Rs.______________(amount) has been accepted by Mr/Miss
-                            ___________________________.
+                            The said gift of Rs. ${amount} has been accepted by Mr/Miss
+                            ${donee}.
                         </p>
                     </div>
                     <div class="point">

@@ -78,7 +78,7 @@ function App() {
     },
     {
       path:'/form',
-      element:<Hello/>
+      element:<GiftDeed/>
     }
   ])
 
