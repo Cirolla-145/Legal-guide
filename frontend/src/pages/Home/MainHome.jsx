@@ -2,7 +2,7 @@ import React from 'react'
 import LogoutButton from '../../components/Chat-app/sidebar/LogoutButton'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { useAuthContext } from '../../components/Chat-app/context/AuthContext'
-
+import "./MainHome.css"
 
 
 function MainHome() {
@@ -61,7 +61,9 @@ function MainHome() {
                     <LogoutButton />
                 </div>
             </div>
+            <div className="body h-screen">
             <Outlet />
+            </div>
         </div>
 
     )

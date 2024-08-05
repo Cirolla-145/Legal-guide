@@ -9,8 +9,8 @@ const GiftDeedForm = () => {
      const today = new Date()  
 
   return (
-    <div className="flex text-black justify-center m-0 items-center ">
-        <div className=" bg-white max-w-2xl overflow-auto p-5">
+    <div className="flex text-black justify-center m-0 items-center z-50">
+        <div className=" bg-white max-w-2xl overflow-auto p-5 z-50">
             <h1>GIFT DEED</h1>
             <div className="body">
                 <div className=" p-1 mb-2 justify-start">

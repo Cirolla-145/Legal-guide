@@ -21,7 +21,7 @@ const CPC = () => {
     return (
         <div className="">
             <SearchInput arr={arr} onSearch={handleChange} />
-        <div className=' h-full py-2 flex flex-col  w-auto m-5'>
+        <div className=' h-full flex flex-col  w-auto m-5'>
             {
                 arr.map(section => {
                     return (

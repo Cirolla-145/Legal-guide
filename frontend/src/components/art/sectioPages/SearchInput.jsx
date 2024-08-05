@@ -21,7 +21,7 @@ const SearchInput = ({arr,onSearch}) => {
     
 
     return (
-        <div className=" mt-5 flex justify-start m-5 ">
+        <div className=" flex justify-start p-5">
         <form onSubmit={handleSubmit(onFormSubmit)} className='flex items-start gap-2 '>
             <input
                 type='text'
